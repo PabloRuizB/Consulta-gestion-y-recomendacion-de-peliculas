@@ -1,1 +1,1 @@
-# Aplicaci-n-web-para-consulta-gesti-n-y-recomendaci-n-de-peliculas
+Aplicaciín web para consulta gestión y recomendación de películas
