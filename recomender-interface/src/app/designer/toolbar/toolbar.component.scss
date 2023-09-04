@@ -1,0 +1,26 @@
+@import '/src/styles/variables';
+
+.toolbar-container{
+  width: 100%;
+  height: $toolbar-height;
+  background: $header-bg;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-title{
+  font-size: 35px;
+  font-weight: bold;
+  color: $primary;
+  flex: 1 0 auto;
+  font-family: sans-serif;
+}
+.toolbar-icon{
+  flex: 0 0 50px;
+  height: 100%;
+  color: orange;
+}
+.toolbar-avatar{
+  flex: 0 0 80px;
+}

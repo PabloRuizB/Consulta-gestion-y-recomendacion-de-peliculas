@@ -1,0 +1,75 @@
+@import '/src/styles/variables';
+
+.login-container{
+  width: 500px;
+  height: 100%;
+  position: absolute;
+  background-color: $header-bg;
+  box-shadow: 5px 5px 5px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.login-title{
+  width: 100%;
+  flex: 0 0 15%;
+  text-align: center;
+  font-size: 40px;
+  color: $color-text;
+}
+.app-title{
+  width: 100%;
+  position: absolute;
+  top: 10%;
+  text-align: center;
+  font-size: 60px;
+  color: $primary;
+  font-weight: bold;
+}
+.login-centered{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.login-form{
+  flex: 1 0 100%;
+  display: flex;
+  flex-direction: column;
+  .login-input{
+    color: $color-text;
+    margin: 15px 50px;
+    p{
+      margin: 0;
+    }
+    input{
+      width: 100%;
+      padding: 2px 4px;
+    }
+  }
+  .login-button{
+    background-color: $primary;
+    color: $color-text;
+    border: none;
+    padding: 4px 8px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+.logo-container{
+  position: absolute;
+  width: 500px;
+  color: orange;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -50%);
+}
+.error-msg {
+  text-align: center;
+  color: $error-color;
+}
+
+.register-msg{
+  text-align: center;
+  color: $color-text;
+}

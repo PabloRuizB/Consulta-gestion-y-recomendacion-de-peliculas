@@ -1,0 +1,26 @@
+<app-toolbar></app-toolbar>
+
+<mat-sidenav-container class="sidenav-container" #sidenav>
+  <mat-sidenav
+    #sidenav
+    mode="side"
+    opened
+    [fixedInViewport]="options.value.fixed"
+    [fixedTopGap]="options.value.top"
+    [fixedBottomGap]="options.value.bottom"
+  >
+    <div class="sidenav">
+      <button mat-flat-button (click)="displayContent('catalog')"><mat-icon>movie</mat-icon>Catálogo</button>
+      <button mat-flat-button (click)="displayContent('my-list')"><mat-icon>list</mat-icon>Mis peliculas</button>
+      <button mat-flat-button (click)="displayContent('pending')"><mat-icon>av_timer</mat-icon>Pendientes de ver</button>
+      <button mat-flat-button (click)="displayContent('recommendations')"><mat-icon>search</mat-icon>Recomendaciones</button>
+      <button mat-flat-button (click)="logout()"><mat-icon>logout</mat-icon>Cerrar sesión</button>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content [formGroup]="options">
+    <div style="height: 100%; width: 100%;">
+      <router-outlet name="designerContent"></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,59 @@
+@import '/src/styles/variables';
+
+.designer-container{
+  width: 100%;
+  height: calc(100% - $toolbar-height);
+  position: relative;
+
+  .inital-msg{
+    border-radius: 20px;
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $header-bg;
+    display: flex;
+    flex-direction: column;
+
+    .inital-msg-item{
+      padding: 0 30px;
+      color: $color-text;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .inital-msg-title{
+      color: $primary;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .inital-msg-button{
+      margin: auto;
+      background: $primary;
+      border: solid 1px $primary;
+      border-radius: 5px;
+      padding: 8px;
+    }
+    .inital-msg-button:hover{
+      background: rgb(219, 143, 3);
+    }
+  }
+}
+
+.sidenav-container {
+  height: 100%;
+}
+.sidenav {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  button {
+    justify-content: flex-start;
+  }
+}
+

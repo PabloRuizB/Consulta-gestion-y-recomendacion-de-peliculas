@@ -1,0 +1,35 @@
+<div class="movie-container">
+  <div class="movie-title-container">
+    <span class="movie-title">{{ name }}</span>
+  </div>
+  <div class="movie-header">
+    <div class="image-container">
+      <img
+        [src]="'https://image.tmdb.org/t/p/original' + source"
+        alt="image"
+        class="image"
+      />
+    </div>
+    <div class="info-container">
+      <p class="info-title">Sinapsis</p>
+      <p>
+        {{ sinapsis }}
+      </p>
+      <p class="info-title">Generos</p>
+      <p>{{genres}}</p>
+      <p class="info-title">Dirección</p>
+      <p>{{directors}}</p>
+      <p class="info-title">Guión</p>
+      <p>{{writters}}</p>
+      <p class="info-title">Reparto principal</p>
+      <p>{{actors}}</p>
+    </div>
+    <div class="actions-container">
+      <button *ngIf="isPending" mat-flat-button style="justify-content: flex-start; width: fit-content; margin-left: auto; margin-right: auto; margin-bottom: 20px;" (click)="removeFromPending()"><mat-icon>av_timer</mat-icon>Eliminar de pendientes</button>
+      <button *ngIf="!isPending" mat-flat-button style="justify-content: flex-start; width: fit-content; margin-left: auto; margin-right: auto; margin-bottom: 20px;" (click)="addToPending()"><mat-icon>av_timer</mat-icon>Añadir a pendientes</button>
+
+      <app-rating class="rating-field" [rating]="rating" (rated)="rateMovie($event)"></app-rating>
+      <button *ngIf="isColdInitMovie" mat-flat-button style="justify-content: flex-start; width: fit-content; margin-left: auto; margin-right: auto; margin-bottom: 20px;" (click)="onNextClick()"><mat-icon>navigate_next</mat-icon>Siguiente</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<form class="example-form" (submit)="onSearch()">
+  <mat-form-field class="search-field">
+    <input type="tel" matInput placeholder="Busca un título" [(ngModel)]="searchText" name="search" (ngModelChange)="onChange()">
+    <mat-icon matSuffix (click)="onSearch()" class="search-bar-button">search</mat-icon>
+  </mat-form-field>
+</form>

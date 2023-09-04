@@ -1,0 +1,17 @@
+<div [hidden]="isHidden" style="background-color: #444444;
+    position: absolute;
+    top: 50px;
+    right: 4px;
+    height: fit-content;
+    width: fit-content;
+    border: solid 1px gray;
+    color: white;
+    padding: 10px;
+    z-index: 10;">
+
+    <p>Usuario: {{user_name}}</p>
+    <p>Correo: {{email}}</p>
+    <span>Gravatar Id: </span>
+    <input type="text" matInput placeholder="Busca un título" [(ngModel)]="gravatar_id" name="gravatar_id" (input)="setGravatarId()">
+
+</div>

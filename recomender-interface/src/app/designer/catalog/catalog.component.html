@@ -1,0 +1,25 @@
+<h1 class="catalog-title">{{title}}</h1>
+<div class="filter-container">
+  <app-search-bar (search)="onSearch($event)" (textChanged)="refreshSearchText($event)"></app-search-bar>
+  <mat-form-field class="filter-dropdown">
+    <select matNativeControl required [(ngModel)]="order_field">
+      <option value="title">Titulo</option>
+      <option value="rating">Valoración</option>
+    </select>
+  </mat-form-field>
+  <mat-form-field class="filter-dropdown">
+    <select matNativeControl required [(ngModel)]="order_type">
+      <option value="asc">Ascendente</option>
+      <option value="desc">Descendente</option>
+    </select>
+  </mat-form-field>
+</div>
+<div class="catalog-container">
+  <div *ngFor="let movie of movies" class="image-container" (click)="showMovieDetail(movie)">
+    <img [src]="'https://image.tmdb.org/t/p/original'+movie.image" alt="image" class="image" />
+  </div>
+  <div class="catalog-actions-container">
+    <button mat-flat-button [hidden]="page_number == 0" (click)="pageBefore()"><mat-icon>navigate_before</mat-icon>Anterior</button>
+    <button mat-flat-button (click)="pageNext()" [hidden]="movies?.length == 0">Siguiente<mat-icon>navigate_next</mat-icon></button>
+  </div>
+</div>

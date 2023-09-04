@@ -1,0 +1,15 @@
+@import '../../../styles/variables';
+
+.example-form {
+  width: 100%;
+}
+
+.search-field {
+  width: 100%;
+}
+
+.search-bar-button {
+  &:hover {
+    background-color: $base-bg;
+  }
+}

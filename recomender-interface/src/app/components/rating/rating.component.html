@@ -1,0 +1,15 @@
+<div style="display: flex">
+  <div
+    *ngFor="let index of [1, 2, 3, 4, 5]"
+    (mouseenter)="provisional_rating = index"
+    (mouseleave)="provisional_rating = rating"
+    (click)="rating = index"
+  >
+    <div [hidden]="!(provisional_rating < index)">
+      <mat-icon>star_border</mat-icon>
+    </div>
+    <div [hidden]="(provisional_rating < index)">
+      <mat-icon>star</mat-icon>
+    </div>
+  </div>
+</div>
